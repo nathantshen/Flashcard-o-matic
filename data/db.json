@@ -1,0 +1,131 @@
+{
+  "decks": [
+    {
+      "name": "React",
+      "description": "React Review",
+      "id": 4
+    },
+    {
+      "name": "Example ",
+      "description": "this is an example\n",
+      "id": 5
+    },
+    {
+      "name": "Empty",
+      "description": "Empty Deck Example",
+      "id": 6
+    }
+  ],
+  "cards": [
+    {
+      "front": "ba",
+      "back": "fr",
+      "id": 4
+    },
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "front": "b",
+      "back": "b",
+      "id": 6
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "id": 7
+    },
+    {
+      "front": "b",
+      "back": "a",
+      "id": 8
+    },
+    {
+      "front": "b",
+      "back": "a",
+      "id": 9,
+      "deckId": "4"
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": null,
+      "id": 10
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": null,
+      "id": 11
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": null,
+      "id": 12
+    },
+    {
+      "front": "b",
+      "back": "a",
+      "id": 13,
+      "deckId": "4"
+    },
+    {
+      "front": "State vs Variable",
+      "back": "State rerenders component",
+      "id": 14,
+      "deckId": 4
+    },
+    {
+      "front": "a",
+      "back": "aasa",
+      "id": 15,
+      "deckId": 5
+    },
+    {
+      "front": "a",
+      "back": "a",
+      "deckId": 5,
+      "id": 16
+    },
+    {
+      "front": "s",
+      "back": "s",
+      "deckId": 5,
+      "id": 17
+    },
+    {
+      "front": "s",
+      "back": "s",
+      "deckId": 5,
+      "id": 18
+    },
+    {
+      "front": "useHistory",
+      "back": "History.push to go to a different page",
+      "deckId": 4,
+      "id": 19
+    },
+    {
+      "front": "Switch",
+      "back": "loads only 1 route",
+      "deckId": 4,
+      "id": 20
+    },
+    {
+      "front": "useEffect()",
+      "back": "runs after it renders",
+      "deckId": 4,
+      "id": 21
+    },
+    {
+      "front": "Dependeny arrray",
+      "back": "controls when useEffect runs",
+      "deckId": 4,
+      "id": 22
+    }
+  ]
+}
