@@ -16,7 +16,7 @@ const Deck = () => {
 
   useEffect(() => {
     getDeck();
-  }, [])
+  }, [deckId])
 
   return <div>
 
@@ -45,8 +45,8 @@ const Deck = () => {
   </button>
 
   <h1>Cards</h1>
-  {deck.cards?.map((card)=>{
-    return <div>
+  {deck.cards?.map((card, index)=>{
+    return <div key={index}>
       <p><strong>
         {card.front}
         </strong></p>

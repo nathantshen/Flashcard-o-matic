@@ -1,6 +1,7 @@
 import React , {useEffect , useState} from "react";
 import { useParams , Link , Switch , Route , useHistory } from "react-router-dom";
 import { readDeck , deleteDeck, createCard } from "../utils/api";
+import CardForm from "../components/CardForm";
 
 const AddCard = () => {
   const {deckId} = useParams();
@@ -17,7 +18,7 @@ const AddCard = () => {
 
   useEffect(() => {
     getDeck();
-  }, [])
+  }, [deckId])
 
   return <div>
   <Link to="/">Home</Link>
@@ -26,23 +27,15 @@ const AddCard = () => {
       / AddCard
 
     <h1>{deck.name}: <span>Add Card</span></h1>
-      <form onSubmit={async (e)=>{
+    <CardForm onSubmit={async (e)=>{
       e.preventDefault()
       await createCard(deck.id, {front , back});
       setFront("");
       setBack("");
-      }}>
-      <p>Front</p>
-      <textarea value={front} placeholder="Front side of card" onChange={(e)=>{
-        setFront(e.target.value)
-      }}></textarea>
-      <p>Back</p>
-      <textarea value={back} placeholder="Back side of card" onChange={(e)=>{
-        setBack(e.target.value)
-      }}></textarea>
-      <button onClick= {()=> history.push(`/decks/${deck.id}`)}>Done</button>
-      <button> Save </button>
-    </form>
+      }} front = {front} setFront = {setFront} back = {back} setBack = {setBack}>
+        <button onClick= {()=> history.push(`/decks/${deck.id}`)}>Done</button>
+        <button> Save </button>
+      </CardForm>
   </div>
 }
 

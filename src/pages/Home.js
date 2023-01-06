@@ -19,8 +19,8 @@ const Home = () => {
     <button onClick= {()=> history.push(`/decks/new`)}>
       Create Deck
     </button>
-    {decks.map((deck)=>{
-      return <div>
+    {decks.map((deck, index)=>{
+      return <div key={index}>
         <h2>{deck.name}</h2>
         <p>{deck.description}</p>
         <p>{deck.cards.length} cards</p>

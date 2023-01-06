@@ -22,7 +22,7 @@ const Study = () => {
 
   useEffect(() => {
     getDeck();
-  }, [])
+  }, [deckId])
 
   return <div>
     <Link to="/">Home</Link>
@@ -49,7 +49,7 @@ const Study = () => {
                 if(result == true){
                   setCard(deck.cards[0]);
                   setCardSide(1)
-                  setCardIndex(cardIndex + 1)
+                  setCardIndex(1)
                 } else{history.push("/")}
               } else {
                   setCard(deck.cards[cardIndex])

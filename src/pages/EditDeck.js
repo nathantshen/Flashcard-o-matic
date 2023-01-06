@@ -21,7 +21,7 @@ const EditDeck = () => {
 
   useEffect(() => {
     getDeck();
-  }, [])
+  }, [deckId])
 
   return <div>
   <Link to="/">Home</Link>
