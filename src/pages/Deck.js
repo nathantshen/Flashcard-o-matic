@@ -7,7 +7,6 @@ const Deck = () => {
   const {deckId } = useParams();
   const [deck , setDeck] = useState({});
   const history = useHistory();
-
   const getDeck = async () => {
     const data = await readDeck(deckId);
     console.log(data)
@@ -40,7 +39,7 @@ const Deck = () => {
             await deleteDeck(deck.id);
             history.push(`/`);
           }
-        }}>
+        }}> 
     Delete
   </button>
 
@@ -59,6 +58,7 @@ const Deck = () => {
           console.log(results);
           if(results == true){
             await deleteCard(card.id);
+            window.location.reload()
             history.push(`/decks/${deck.id}`);
           }
         }}>
