@@ -36,7 +36,8 @@ const Deck = () => {
           const result = window.confirm("Delete this deck?");
           console.log(result);
           if(result == true){
-            await deleteDeck(deck.id);
+            await deleteDeck(deck.id)
+            window.location.reload();;
             history.push(`/`);
           }
         }}> 
