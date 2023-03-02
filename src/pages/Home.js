@@ -1,9 +1,10 @@
 import React , {useState , useEffect} from "react";
-import { useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import {deleteDeck, listDecks} from "../utils/api/index.js"
 
 
 const Home = () => {
+  const {deckId} = useParams();
   const [decks , setDecks] = useState([]);
   const history = useHistory();
   const getDecks = async () => {
@@ -34,8 +35,8 @@ const Home = () => {
           const result = window.confirm("Delete this deck?");
           console.log(result);
           if(result == true){
-            await deleteDeck(deck.id);
-            getDecks();
+            await deleteDeck(deck.id)
+            window.location.reload();
           }
         }}>
           Delete
